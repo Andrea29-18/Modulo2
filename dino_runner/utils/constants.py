@@ -1,5 +1,6 @@
-import pygame
 import os
+
+import pygame
 
 # Global Constants
 TITLE = "Chrome Dino Runner"
@@ -67,9 +68,16 @@ HAMMER = pygame.image.load(os.path.join(IMG_DIR, 'Other/hammer.png'))
 
 BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
 
+Cloud =  pygame.image.load(os.path.join(IMG_DIR, 'Other/Cloud.png'))
+
 HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
 
 DEFAULT_TYPE = "default"
 
+FONT_STYLE= 'freesansbold.ttf'
 
-FONT_STYLE = 'freesansbold.ttf'
+SHIELD_TYPE = 'shield'
+
+GAME_OVER = pygame.image.load(os.path.join(IMG_DIR, 'Other/GameOver.png'))
+
+DINO_DEAD = pygame.image.load(os.path.join(IMG_DIR, 'DIno/DinoDead.png'))
