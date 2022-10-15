@@ -110,4 +110,9 @@ RUN_IMG = {
     HAMMER_TYPE: RUNNING_HAMMER
 }
 
-
+SOUND = [
+    pg.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/Jump.wav')),
+    pg.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/LoserGame.wav')),
+    pg.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/Shield.wav')),
+    pg.mixer.Sound(os.path.join(IMG_DIR, 'Sounds/Hammer.wav'))
+]

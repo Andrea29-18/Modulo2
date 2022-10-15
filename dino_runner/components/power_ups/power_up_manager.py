@@ -4,7 +4,7 @@ import pygame
 
 from dino_runner.components.power_ups.hammer import Hammer
 from dino_runner.components.power_ups.shield import Shield
-from dino_runner.utils.constants import HAMMER_TYPE, SHIELD, SHIELD_TYPE
+from dino_runner.utils.constants import HAMMER_TYPE, SHIELD, SHIELD_TYPE, SOUND
 
 
 class PowerUpManager:
@@ -33,10 +33,12 @@ class PowerUpManager:
                 game.player.has_power_up = True
                 game.player.type = power_up.type
                 if game.player.type ==  HAMMER_TYPE:
-                    game.player.power_time_up = power_up.start_time + (self.duration * 1000)
+                    SOUND[3].play(0, self.duration * 1100)
+                    game.player.power_time_up = power_up.start_time + (self.duration * 1100)
                     self.power_ups.remove(power_up)
                 elif game.player.type ==  SHIELD_TYPE:
-                    game.player.power_time_up = power_up.start_time + (self.duration * 1000)
+                    SOUND[2].play(0, self.duration * 1000)
+                    game.player.power_time_up = power_up.start_time + (self.duration * 1100)
                     self.power_ups.remove(power_up)
 
     def draw(self, screen):
