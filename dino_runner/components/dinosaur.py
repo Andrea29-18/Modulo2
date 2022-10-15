@@ -73,8 +73,6 @@ class Dinosaur(Sprite):
             self.jump_vel = JUMP_VEL
 
     def duck(self):
-        #Fue por el index porque daba numeros de un arreglo que no exista y en el % accede la pocion
-        #Es teoria le decimos si es par vete al 0 sino al otro 1
         self.image = DUCK_IMG[self.type][(self.step_index_duck//5)%2]
         self.dino_rect = self.image.get_rect()
         self.dino_rect.x = DINO_RECT_X

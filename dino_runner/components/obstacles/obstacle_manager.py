@@ -32,10 +32,6 @@ class ObstacleManager:
                 else:
                     self.obstacles.remove(obstacle)
 
-    def eliminarPorHamber():
-        #Preguntar mientras que avanza (la pocicion) hay un obstaculo se elimina
-        pass
-
     def draw(self, screen):
         for obstacle in self.obstacles:
             obstacle.draw(screen)
