@@ -1,17 +1,11 @@
+import pygame
 import random
 
-from dino_runner.components.obstacles.obstacle import Obstacle
-from dino_runner.utils.constants import LARGE_CACTUS, SMALL_CACTUS
+from dino_runner.components.obstacles.obstacles import Obstacle
 
 
 class Cactus(Obstacle):
-    CACTUS = {
-        'LARGE' : (LARGE_CACTUS, 300),
-        'SMALL' : (SMALL_CACTUS, 325),
-    }
-    
-    def __init__(self, cactus_type):
-        image, castus_pos = self.CACTUS[cactus_type]
-        self.type = random.randint(0,2)
+    def __init__(self, image, coor_y):
+        self.type = random.randint(0, 2)
         super().__init__(image, self.type)
-        self.rect.y = castus_pos 
+        self.rect.y = coor_y
